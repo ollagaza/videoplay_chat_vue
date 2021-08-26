@@ -1,0 +1,185 @@
+@charset "utf-8";
+/*@import url('https://fonts.googleapis.com/icon?family=Material+Icons');*/
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(170, 170, 170, 0.6);
+  border-radius: 4px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {background: transparent; width: 0; height: 0;}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+html, body, .app_main { width: 100%; height: 100%; margin: 0; padding: 0; }
+.app_root {
+  /*position: relative;*/
+  /*display: flex;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*font-size: 13px;*/
+  /*min-width: 1180px;*/
+  min-height: 100%;
+  margin: 0 auto -50px;
+  font-size: 13px;
+}
+
+footer, .page_bottom {
+  height: 50px;
+  /*background-color:red;*/
+}
+
+.app_root .page_wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  /*position: relative;*/
+  max-width: 100%;
+  min-height: 700px;
+}
+
+.app_root.no_pad {
+  /*min-height: unset;*/
+}
+.app_root.no_pad .page_wrapper {
+  padding: 0;
+}
+
+input, textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input.text{
+  border:1px solid #ccc;
+  height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333;
+  padding-left: 10px;
+  letter-spacing: -0.5px;
+}
+
+input.text::placeholder{
+  color:#888;
+}
+
+
+select {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("/img/jiin/dropbox_arrow.png");
+  margin-right: 10px;
+  background-position: 95% center;
+  background-repeat: no-repeat;
+}
+
+select.text {
+  padding-left: 10px;
+  padding-right: 10px;
+  border:1px solid #ccc;
+  height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.datepicker_icon {
+  position: relative;
+}
+.datepicker_icon::before {
+  position: absolute;
+  content: '';
+  right: 5px;
+  top: calc(50% - 9px);
+  width: 16px;
+  height: 18px;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-image: url("/img/jiin/calendar_icon.png");
+}
+.input_wrapper {
+  position: relative;
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 30px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 0 10px;
+  align-items: center;
+  width: 100%;
+}
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 38px;
+  height: 30px;
+}
+.lds-facebook div {
+  vertical-align: top;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 8px;
+  background: #009cdf;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 0;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 15px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 30px;
+  animation-delay: 0s;
+}
+.lds-facebook div:nth-child(4) {
+  left: 45px;
+  animation-delay: 0s;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 0;
+    height: 30px;
+  }
+  50%, 100% {
+    top: 10px;
+    height: 10px;
+  }
+}

@@ -1,0 +1,244 @@
+.list_item_wrapper {
+  display: flex;
+  flex-basis: 50px;
+  flex-direction: row;
+  width: 100%;
+  height: 48px;
+  border-bottom: 1px solid #dddddd;
+  margin: 0;
+  align-items: center;
+  list-style-type: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  /*box-shadow: 0 2px 3px -2px rgba(0,0,0,.1);*/
+  padding: 0 10px;
+}
+.list_item_wrapper:hover {
+  background-color: #fbfbfb;
+  /*border: 1px solid #009cdf;*/
+}
+.list_item_wrapper.checked {
+  background-color: #f6fcff;
+}
+.list_item_wrapper.checked:hover {
+  background-color: #fbfbfb;
+}
+
+.list_item_wrapper.header {
+  flex-basis: 20px;
+  height: 30px;
+  border: 1px solid transparent;
+  color: #aaaaaa;
+  box-shadow: none;
+  cursor: default;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+.list_item_wrapper.header:hover {
+  background-color: #ffffff;
+}
+.list_item_wrapper.header > li {
+  font-size: 13px;
+}
+
+.list_item_wrapper .btn {
+  font-size: 13px !important;
+}
+
+.list_item_wrapper > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  line-height: 1.2;
+}
+.list_item_wrapper > li.small_font {
+  font-size: 13px;
+  color: #555555;
+  font-weight: 300;
+}
+.list_item_wrapper > li.left_align {
+  justify-content: flex-start;
+}
+.list_item_wrapper > li.flex {
+  padding: 0 20px;
+  justify-content: flex-start;
+}
+.list_item_wrapper:hover .hover_point {
+  color: #009cdf;
+}
+.f_w_20 {
+  flex-basis: 20px;
+  width: 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_25 {
+  flex-basis: 25px;
+  width: 25px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_30 {
+  flex-basis: 30px;
+  width: 30px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_40 {
+  flex-basis: 40px;
+  width: 40px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_50 {
+  flex-basis: 50px;
+  width: 50px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_60 {
+  flex-basis: 60px;
+  width: 60px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_70 {
+  flex-basis: 70px;
+  width: 70px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_80 {
+  flex-basis: 80px;
+  width: 80px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_90 {
+  flex-basis: 90px;
+  width: 90px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_100 {
+  flex-basis: 100px;
+  width: 100px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_110 {
+  flex-basis: 110px;
+  width: 110px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_120 {
+  flex-basis: 120px;
+  width: 120px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_130 {
+  flex-basis: 130px;
+  width: 130px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_150 {
+  flex-basis: 150px;
+  width: 150px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_190 {
+  flex-basis: 190px;
+  width: 190px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_200 {
+  flex-basis: 200px;
+  width: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_250 {
+  flex-basis: 250px;
+  width: 250px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_300 {
+  flex-basis: 300px;
+  width: 300px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.f_w_400 {
+  flex-basis: 400px;
+  width: 400px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.flex {
+  flex: 1;
+  max-width: 100%;
+  min-width: 0;
+}
+.flex_between {
+  justify-content: space-between;
+}
+.p_v_5 {
+  padding: 5px 0;
+}
+.p_a_5 {
+  padding: 5px;
+}
+.p_h_10 {
+  padding: 0 10px;
+}
+
+.icon-enter-active, .icon-leave-active {
+  transition: all 0.5s;
+}
+.icon-move {
+  transition: all 1s;
+}
+.icon-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+.icon-enter, .icon-leave-to {
+  opacity: 0;
+  transform-origin: center center;
+  transform: scale(0.7);
+}
+
+.list-enter-active, .list-leave-active {
+  transition: all 0.5s;
+}
+.list-move {
+  transition: all 1s;
+}
+.list-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+.list-enter, .list-leave-to {
+  opacity: 0;
+  transform-origin: center center;
+  transform: scaleY(0.7);
+}
+
+.new_icon {
+  background-image: url("/img/icon/new_icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-left: 20px;
+  height: 20px;
+}
+.new_icon_space {
+  padding-left: 16px;
+}
