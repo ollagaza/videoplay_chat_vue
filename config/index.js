@@ -20,7 +20,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 10081,
+    port: 10085,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -61,6 +61,19 @@ module.exports = {
           proxyReq.setHeader('Host', req.hostname);
         }
       },
+      '/api': {
+        target: 'http://localhost:3000/api',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '',
+          secure: false
+        },
+        onProxyReq: function(proxyReq, req, res) {
+          proxyReq.setHeader('X-Forwarded-Host', req.get('host'));
+          proxyReq.setHeader('Host', req.hostname);
+        }
+      },
+
       '/apid1': {
         target: 'http://localhost:3600/apid1',
         changeOrigin: true,

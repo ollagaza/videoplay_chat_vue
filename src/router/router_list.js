@@ -1,8 +1,13 @@
 import IndexPage from '../pages/IndexPage';
 import Page1 from '../pages/Page1';
-import Page2 from '../pages/Page2';
-import Join from '../components/join/Join'
-import Member_Info from '../components/join/Member_Info'
+import Operation from '../pages/Operation';
+import OperationView from '../pages/OperationView';
+import Page4 from '../pages/Page4';
+import Chat from '../pages/Chat';
+import Rooms from '../pages/Rooms';
+import Join from '../components/join/Join';
+import Member_Info from '../components/join/Member_Info';
+import Member from '../pages/Member';
 
 const router_list = [
   {
@@ -18,9 +23,39 @@ const router_list = [
     meta: { navigation: '', border_line: '', menu_id: '0', no_pad: true, guest: true, login: false, helpCode: 'main' },
   },
   {
-    path: '/page2',
-    name: 'page2',
-    component: Page2,
+    path: '/operation/:is_list',
+    name: 'operation',
+    component: Operation,
+    meta: { navigation: '', border_line: '', menu_id: '0', no_pad: true, guest: true, login: false, helpCode: 'main' },
+  },
+  {
+    path: '/page4/:operation_seq',
+    name: 'page4',
+    component: Page4,
+    meta: { navigation: '', border_line: '', menu_id: '0', no_pad: true, guest: true, login: false, helpCode: 'main' },
+  },
+  {
+    path: '/operationview/:operation_seq',
+    name: 'operationview',
+    component: OperationView,
+    meta: { navigation: '', border_line: '', menu_id: '0', no_pad: true, guest: true, login: false, helpCode: 'main' },
+  },
+  {
+    path: '/chat',
+    name: 'chat',
+    component: Chat,
+    meta: { navigation: '', border_line: '', menu_id: '0', no_pad: true, guest: true, login: false, helpCode: 'main' },
+  },
+  {
+    path: '/member/:is_list',
+    name: 'member',
+    component: Member,
+    meta: { navigation: '', border_line: '', menu_id: '0', no_pad: true, guest: true, login: false, helpCode: 'main' },
+  },
+  {
+    path: '/chat/:room_name?',
+    name: 'rooms',
+    component: Rooms,
     meta: { navigation: '', border_line: '', menu_id: '0', no_pad: true, guest: true, login: false, helpCode: 'main' },
   },
   {

@@ -1,0 +1,125 @@
+.editor_out_blue_line {
+  position: relative;
+}
+.editor_out_blue_line > *[contentEditable="true"]:focus {
+  outline: 2px solid #2e6bb8;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.editor_out_blue_line > *[contentEditable="true"]:hover {
+  outline: 2px solid #2e6bb8;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.editor_out_blue_line > *[contentEditable="true"]:hover + .edit_button,
+.editor_out_blue_line > *[contentEditable="true"]:focus + .edit_button {
+  background-color: #ffa00f;
+}
+.editor_out_blue_line > *[contentEditable="true"]:hover + .edit_button > .edit_icon,
+.editor_out_blue_line > *[contentEditable="true"]:hover + .edit_button > .upload_icon,
+.editor_out_blue_line > *[contentEditable="true"]:focus + .edit_button > .edit_icon,
+.editor_out_blue_line > *[contentEditable="true"]:focus + .edit_button > .upload_icon {
+  filter: none;
+}
+.edit_button:hover + *[contentEditable="true"] {
+  outline: 2px solid #2e6bb8;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.edit_button:hover > .edit_icon ~ *[contentEditable="true"],
+.edit_button:hover > .upload_icon ~ *[contentEditable="true"] {
+  outline: 2px solid #2e6bb8;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.edit_button {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 10px;
+  border-radius: 20px;
+  background-color: #fff6e9;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.edit_button:hover {
+  background-color: #ffa00f;
+}
+.edit_button:hover > .edit_icon,
+.edit_button:hover > .upload_icon {
+  filter: none;
+}
+.edit_button > .edit_icon {
+  filter: invert(30%) sepia(100%) saturate(2523%) hue-rotate(349deg) brightness(100%) contrast(100%);
+  background-image: url("/img/renewal/mypage/profile_edite_icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 14px;
+  height: 12px;
+}
+.edit_button > .upload_icon {
+  filter: invert(30%) sepia(100%) saturate(2523%) hue-rotate(349deg) brightness(100%) contrast(100%);
+  background-image: url("/img/renewal/mentoring/image_icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 14px;
+  height: 12px;
+}
+.empty_button.on {
+  display: flex;
+}
+.empty_button {
+  position: absolute;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 50px;
+  border-radius: 20px;
+  background-color: #fff6e9;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.empty_button > .empty_icon {
+  filter: invert(30%) sepia(100%) saturate(2523%) hue-rotate(349deg) brightness(100%) contrast(100%);
+  background-image: url("/img/renewal/mypage/empty_icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 14px;
+  height: 12px;
+}
+.empty_button:hover {
+  background-color: #ffa00f;
+}
+.empty_button:hover > .empty_icon {
+  filter: none;
+}
+
+.editor_viewer {
+  word-break: break-word;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #555555;
+}
+.editor_viewer p {
+  padding: 0;
+  margin: 0;
+}
+.editor_viewer ol {
+  margin: 0;
+  padding-left: 1em;
+}
+
+.editor_viewer img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: scale-down;
+}
+
+.editor_viewer a {
+  text-decoration: underline;
+}

@@ -1,0 +1,348 @@
+.default_table {
+  display: grid;
+  grid-row-gap: 10px;
+  width: 100%;
+  min-height: 40px;
+}
+
+.preview_table {
+}
+
+.preview_table .grid {
+  display: grid;
+  border-left: 1px solid red;
+  border-bottom: 1px solid red;
+}
+
+.preview_table .grid .flex {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-top: 1px solid red;
+  border-right: 1px solid red;
+}
+
+.preview_table .grid .flex.row {
+  flex-direction: row;
+}
+
+.preview_table .grid .flex.column {
+  flex-direction: column;
+}
+
+.preview_table .grid .flex .grid_inputbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.preview_table .grid .flex .grid_inputbox.row {
+  flex-direction: row;
+}
+
+.preview_table .grid .flex .grid_inputbox.column {
+  flex-direction: column;
+}
+
+.preview_table .grid .flex .grid_inputbox > label {
+  word-break: keep-all;
+  text-align: center;
+}
+
+.preview_table .grid .flex .grid_inputbox > input {
+  width: 100%;
+  color: #555555;
+  padding: 0;
+}
+
+.preview_table .grid .flex .grid_inputbox > textarea {
+  width: 100%;
+  min-height: 100%;
+  color: #555555;
+  padding: 0;
+  resize: none;
+}
+
+.preview_table .grid .flex .grid_inputbox > select {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(/img/renewal/drive/group_arrow.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.preview_table .grid .flex.on {
+  background-color: #ffffff;
+  border-top: 1px solid green;
+  border-right: 1px solid green;
+}
+
+.preview_table .required {
+  font-weight: 500;
+  font-size: 14px;
+  color: red;
+}
+
+.prior_table {
+  font-size: 14px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.prior_table > .grid {
+  border-left: 1px solid #dddddd;
+}
+
+.prior_table .grid {
+  display: grid;
+}
+
+.prior_table .grid .flex {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-top: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+
+.prior_table .grid .flex.row {
+  flex-direction: row;
+}
+
+.prior_table .grid .flex.column {
+  flex-direction: column;
+}
+
+.prior_table .grid .flex .grid_inputbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.prior_table .grid .flex .grid_inputbox.row {
+  flex-direction: row;
+}
+
+.prior_table .grid .flex .grid_inputbox.column {
+  flex-direction: column;
+}
+
+.prior_table .grid .flex .grid_inputbox > label {
+  word-break: keep-all;
+  text-align: center;
+}
+
+.prior_table .grid .flex .grid_inputbox > label.head {
+  background-image: url(/img/renewal/dynamic_template/survey_point.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 14px;
+  word-break: keep-all;
+  text-align: center;
+}
+
+.prior_table .grid .flex .grid_inputbox > .img_explain {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 6px;
+  padding-top: 1px;
+}
+
+.prior_table .grid .flex .grid_inputbox > input {
+  width: 100%;
+  color: #555555;
+}
+
+.prior_table .grid .flex .grid_inputbox > textarea {
+  width: 100%;
+  min-height: 100%;
+  color: #555555;
+  resize: none;
+}
+
+.prior_table .grid .flex .grid_inputbox > select {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(/img/renewal/drive/group_arrow.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.prior_table .grid .flex.on {
+  background-color: #ffffff;
+  border-top: 1px solid green;
+  border-right: 1px solid green;
+}
+
+.prior_table .required {
+  font-weight: 500;
+  font-size: 14px;
+  color: red;
+}
+
+.control_align_between {
+  justify-content: space-between;
+}
+
+.control_align_around {
+  justify-content: space-around;
+}
+
+.control_align_default {
+  justify-content: stretch;
+}
+
+.vertical_align_top {
+  align-items: flex-start;
+}
+
+.vertical_align_center {
+  align-items: center;
+}
+
+.vertical_align_end {
+  align-items: flex-end;
+}
+
+.text_align_left {
+  justify-content: flex-start;
+}
+
+.text_align_center {
+  justify-content: center;
+}
+
+.text_align_right {
+  justify-content: flex-end;
+}
+
+/* 아래는 컨트롤 패널용임 */
+.control_column {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  max-width: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 5px 5px;
+}
+
+.control_column.on {
+  display: flex;
+}
+
+.control_column .move_bar {
+  display: flex;
+  flex-direction: row;
+  background-color: #0d4e5c;
+  border: 1px solid #ffffff;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.control_column .control_group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.control_column .control_group.hide {
+  display: none;
+}
+
+.control_column .control_align,
+.control_column .control_group > .control_align {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 10px;
+  width: 100%;
+  min-height: 40px;
+}
+
+.control_column .control_align.center,
+.control_column .control_group > .control_align.center {
+  justify-content: center;
+}
+
+.control_column .control_align .inside_row,
+.control_column .control_group > .control_align .inside_row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.control_column .control_align .inside_row:last-child,
+.control_column .control_group > .control_align .inside_row:last-child {
+  margin-bottom: 0px;
+}
+
+.control_column .control_align .inside_column,
+.control_column .control_group > .control_align .inside_column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.control_column .control_align:last-child,
+.control_column .control_group > .control_align:last-child {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+.control_column .control_align .check_group span,
+.control_column .control_group > .control_align .check_group span {
+  font-size: 14px;
+  font-weight: 15;
+}
+
+.control_column .control_align label,
+.control_column .control_group > .control_align label {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.control_column .control_align input[type="text"],
+.control_column .control_group > .control_align input[type="text"] {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  width: 100%;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.control_column textarea {
+  width: 100%;
+  border: 1px solid #dddddd;
+  resize: none;
+}
+
+.control_column .title {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+}

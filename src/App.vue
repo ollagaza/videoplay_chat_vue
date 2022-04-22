@@ -1,20 +1,21 @@
 <template>
-  <div class="app_main">
+  <div class="app_main" style="height : 100%;">
     <div class="app_root" v-bind:class="{ no_pad: meta.no_pad }">
       <template v-if="is_data_load_complete">
         <div class="page_wrapper" v-bind:class="{ no_pad: meta.no_pad }">
           <template v-if="meta.border_line === 'bottom'">
             <div style="position: absolute;top: 99px; width:100%; height: 1px; border-bottom: 1px solid #ccc;"></div>
           </template>
+
+          <router-view :key="$route.fullPath" style="background-color: #fff;height : 100%;" />
           <div class="page_div">
             <Navigation :route_name="route_name" :navview="meta.navigation" :menu_id="meta.menu_id"></Navigation>
-            <router-view/>
           </div>
         </div>
         <div class="page_bottom"></div>
       </template>
     </div>
-    <Footer></Footer>
+    <Footer style="position: fixed; bottom: 0; width: 100%;"></Footer>
     <NowLoading v-show="is_nowLoading" :scaleData="nowLoading_scale" :comment="nowLoading_comment"></NowLoading>
     <AlertPopup ref="alertPopup"></AlertPopup>
     <ConfirmPopup ref="confirmPopup"></ConfirmPopup>
@@ -24,11 +25,32 @@
 </template>
 
 <script>
-import './assets/css/app/base.css';
-import './assets/css/app/popup.css';
-import './assets/css/app/buttons.css';
-import './assets/css/app/list.css';
-import './assets/css/app/table.css';
+import _ from 'lodash';
+import { mapActions, mapGetters } from 'vuex';
+import store from './vuex/store';
+import './assets/css/renewal/base.css';
+import './assets/css/renewal/buttons.css';
+import './assets/css/renewal/page_layout.css';
+import './assets/css/renewal/popup.css';
+import './assets/css/renewal/list.css';
+import './assets/css/renewal/contents.css';
+import './assets/css/renewal/theme_black.css';
+import './assets/css/renewal/theme_white.css';
+import './assets/css/renewal/theme_purple.css';
+import './assets/css/renewal/theme_turquoise.css';
+import './assets/css/renewal/theme_emerald.css';
+import './assets/css/renewal/tooltip.css';
+import './assets/css/renewal/curation.css';
+import './assets/css/renewal/group_popup.css';
+import './assets/css/renewal/invite.css';
+import './assets/css/renewal/margin.css';
+import './assets/css/renewal/tiny_editor.css';
+import './assets/css/renewal/annotation_draw.css';
+import './assets/css/video.css';
+import './assets/css/markdown.css';
+import './assets/css/renewal/timer.css';
+import './assets/css/renewal/notice.css';
+import './assets/css/renewal/basic_dynamic_template.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import NowLoading from './components/popup/NowLoading';
@@ -37,8 +59,6 @@ import ConfirmPopup from './components/popup/ConfirmPopup';
 import ToastMessage from './components/popup/ToastMessage';
 import LoginPopup from './components/popup/LoginPopup';
 import EventBusFuncsMixin from './utils/EventBusFuncsMixin';
-import { mapActions, mapGetters } from 'vuex';
-import store from './vuex/store';
 
 export default {
   name: 'App',
@@ -84,7 +104,7 @@ export default {
   computed: {},
   methods: {
     loadSystemData() {
-      document.title = 'Data Management System';
+      document.title = 'A.I 바우처 수술 동영상관리';
       this.is_data_load_complete = true;
     },
     appendFavicon() {
@@ -110,23 +130,23 @@ export default {
 </script>
 
 <style>
-body { background-color: #f5f2ee; }
-.app_main { background-color: #f5f2ee; }
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-.page_wrapper{
-  width:100%;
-  /*min-height:1500px;*/
-  min-width:1180px;
-}
-.page_div{
-  width:1180px;
-  margin:0 auto;
-}
+/*body { background-color: #f5f2ee; }*/
+/*.app_main { background-color: #f5f2ee; }*/
+/*#app {*/
+/*  font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*  text-align: center;*/
+/*  color: #2c3e50;*/
+/*  margin-top: 60px;*/
+/*}*/
+/*.page_wrapper{*/
+/*  width:100%;*/
+/*  !*min-height:1500px;*!*/
+/*  min-width:1180px;*/
+/*}*/
+/*.page_div{*/
+/*  width:1180px;*/
+/*  margin:0 auto;*/
+/*}*/
 </style>

@@ -137,22 +137,42 @@ export default {
       tel: '',
       email_address: '',
       date_locale_ko: ko,
-      c_is_type: this.$route.query.isType
+      //c_is_type: this.$route.query.isType
     };
   },
+  beforeCreate() { 
+    const isLoggedIn = store.getters['is_logged'];
+    //alert(this.is_logged);
+    // Login 체크
+    //console.log(isLoggedIn);
+    //if(!isLoggedIn) {
+    //  this.$router.push({ name: 'index' });
+    //}    
+    //alert(this.is_logged);
+  },
   mounted() {
-    console.log('111')
+    //console.log('111')
+    //console.log(this.c_is_type)
     if (this.c_is_type === 'e') {
-      console.log('222')
+      //const isLoggedIn = store.getters['is_logged'];
+      //alert(this.is_logged);
+      // Login 체크
+      if(!this.is_logged) {
+        this.$router.push({ name: 'index' });
+      }
+
+
+      //console.log('222')
       this.loadData();
     }
-    console.log('333')
-},  
+    //console.log('333')
+  },  
   mixins: [BaseMixin],
   computed: {
     ...mapGetters(['logged_info', 'is_logged']),
     c_is_type() {
-      return 'this.isType';
+      //return 'this.isType';
+      return this.$route.query.isType;
     },
     c_is_verify_user_name() {
       return this.user_name && this.user_name.length > 1;
@@ -215,7 +235,7 @@ export default {
         //this.$refs.cellphone.value = this.cellphone;
         //this.$refs.tel.value = this.tel;
       }
-      //this.user_id = "SDFDSF";
+      //this.user_id = "USERID";
     },
     isCreateMode() {
       this.$log.debug('isType', this.isType);
@@ -438,7 +458,7 @@ export default {
         });
     },
 
-  }
+  },
 };
 </script>
 

@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* CSS Document */
+
+body.black { background-color: #232323; }
+.app_root.black {
+  background-color: #232323;
+  color: #aaaaaa;
+}
+.app_root.black textarea, .app_root.black input, .app_root.black select {
+  color: #aaaaaa;
+}
+
+/* Track */
+body.black::-webkit-scrollbar-thumb {
+  background: #555555;
+}
+/* Corner */
+body.black::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+/* Track */
+body.black ::-webkit-scrollbar-thumb {
+  background: #555555;
+}
+/* Corner */
+body.black ::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+.app_root.black * {
+  scrollbar-color: #555555 rgba(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+.app_root.black nav {
+  background-color: #1a1a1a;
+  opacity: 1;
+}
+.app_root.black nav > .menu {
+  border-right: 2px solid #333333;
+}
+.app_root.black nav > .menu:last-child {
+  border-right: none;
+}
+.app_root.black nav > .menu.myDrive {
+  background-image: url("/img/renewal/studio/mydrive_off.png");
+}
+.app_root.black nav > .menu.myDrive.on {
+  background-image: url("/img/renewal/studio/mydrive_on.png");
+}
+.app_root.black nav > .menu.myStudio {
+  background-image: url("/img/renewal/studio/mystudio_off.png");
+}
+.app_root.black nav > .menu.myStudio.on {
+  background-image: url("/img/renewal/studio/mystudio_on.png");
+}
+
+.app_root.black .btn {
+  color: #ffffff;
+  background-color: #333333;
+  border: 1px solid #333333;
+}
+.app_root.black .btn:hover {
+  background-color: #555555;
+}
+
+.app_root.black .btn.blue {
+  background-color: #2e6bb8;
+  border: 1px solid #2e6bb8;
+}
+.app_root.black .btn.blue:hover {
+  background-color: #5287c8;
+}
+.app_root.black .btn.empty {
+  /*border: 1px solid #2e6bb8;*/
+  background-color: #232323;
+  color: #2e6bb8;
+}
+.app_root.black .btn.empty:hover {
+  background-color: #5287c8;
+  border: 1px solid #5287c8;
+  color: #FFFFFF;
+}
+.app_root.black .btn.empty_red {
+  color: #ff0000;
+  background-color: #232323;
+}
+.app_root.black .btn.empty_red:hover {
+  color: #ffffff;
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+}
+.app_root.black .btn.progress {
+  color: #dddddd;
+  background-color: #333333;
+  border: 1px solid #232323;
+  cursor: not-allowed;
+}
+.app_root.black .btn.progress:hover {
+  background-color: #333333;
+  border: 1px solid #232323;
+}
+.app_root.black .btn.blue.large {
+  width: 168px;
+  height: 48px;
+  font-size: 18px !important;
+}
+.app_root.black .btn.blue.large > img, .app_root.black .btn.blue.large > span {
+  margin: 0 6px;
+}
+
+.app_root.black .btn:hover {
+  background-color: #555555;
+}
+
+.app_root.black .btn.line_gray {
+  background-color: #292929;
+  border: 1px solid #555555;
+}
+.app_root.black .btn.line_gray:hover {
+  border: 1px solid #424242;
+}
+
+.app_root.black .bg_default {
+  background-color: #232323;
+}
+.app_root.black .bg_dark {
+  background-color: #1a1a1a;
+}
+
+.app_root.black .list_item_wrapper {
+  border: 1px solid #333333;
+  background-color: #232323;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+}
+.app_root.black .list_item_wrapper:hover {
+  background-color: #1a1a1a;
+}
+.app_root.black .list_item_wrapper.header {
+  color: #555555;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.app_root.black .list_item_wrapper.header:hover {
+  background-color: #232323;
+}
+
+.app_root.black .top_search {
+  background-color: #333333;
+  color: #aaaaaa;
+}
+
+.app_root.black .layout .left_menu_layer {
+  border-right: 1px solid #333333;
+  background-color: #232323;
+}
+.app_root.black .layout .left_menu_layer .left_menu_bottom {
+  border-top: 1px solid #333333;
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item > .menu_left {
+  color: #555555;
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.on > .menu_name {
+  color: #ffffff;
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item:hover > .menu_name {
+  color: #ffffff;
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.drive {
+  background-image: url("/img/renewal/studio/menu_icon01.png");
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.drive.on {
+  background-image: url("/img/renewal/studio/menu_icon01_hover.png");
+}
+
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.share {
+  background-image: url("/img/renewal/studio/menu_icon02.png");
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.share.on {
+  background-image: url("/img/renewal/studio/menu_icon02_hover.png");
+}
+
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.recent {
+  background-image: url("/img/renewal/studio/menu_icon03.png");
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.recent.on {
+  background-image: url("/img/renewal/studio/menu_icon03_hover.png");
+}
+
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.favorite {
+  background-image: url("/img/renewal/studio/menu_icon04.png");
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.favorite.on {
+  background-image: url("/img/renewal/studio/menu_icon04_hover.png");
+}
+
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.trash {
+  background-image: url("/img/renewal/studio/menu_icon05.png");
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.trash.on {
+  background-image: url("/img/renewal/studio/menu_icon05_hover.png");
+}
+
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.group {
+  background-image: url("/img/renewal/studio/menu_icon06.png");
+}
+
+.app_root.black .layout .left_menu_layer .left_menu_list .left_menu_item.group.on > .menu_name {
+  color: #aaaaaa;
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .group_list .group_item:hover {
+  color: #2e6bb8;
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .group_list .group_item.on {
+  color: #2e6bb8;
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .group_list .group_item > .modify_btn {
+  background-image: url("/img/renewal/drive/group_modify_on.png");
+}
+.app_root.black .layout .left_menu_layer .left_menu_list .group_list .group_item:hover > .modify_btn:hover {
+  background-image: url("/img/renewal/drive/group_modify_off.png");
+}
+
+.app_root.black .top_left_menu .btn { background-color: #232323; }
+.app_root.black .top_left_menu .btn:hover { background-color: #555555; }
+
+.app_root.black .popup_dim > .popup {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+}
+
+.app_root.black .popup_dim {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.app_root.black .popup .popup_title_top {
+  color: #ffffff;
+}
+
+.app_root.black .popup_dim .popup.close_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.app_root.black .popup .popup_contents .info_table {
+}
+.app_root.black .popup .popup_contents .info_table .info_row {
+}
+.app_root.black .popup .popup_contents .info_table .info_row > label {
+}
+.app_root.black .popup .popup_contents .info_table .info_row > label > span {
+}
+.app_root.black .popup .popup_contents .info_table .info_row > .info {
+}
+.app_root.black .popup .popup_contents .info_table .info_row > .info > label {
+}
+.app_root.black .popup .popup_contents .info_table .info_row > .info .input_wrapper {
+}
+.app_root.black .popup .popup_contents .info_table .info_row > .info input[type="text"] {
+}
+
+.app_root.black .popup .message_wrapper .sub_message { color: #aaaaaa }
+.app_root.black .popup .message_wrapper .sub_message2 { color: #555555; }
+.app_root.black .popup .message_wrapper .message { color: #ffffff; }
+.app_root.black .popup .message_wrapper .title { color: #ffffff; }
+
+.app_root.black .check_box {
+  opacity: 0.4;
+}
+.app_root.black .check_box.on {
+  opacity: 1;
+}
+.app_root.black .delete_btn {
+  background-image: url("/img/renewal/drive/list_delete_off.png");
+}
+.app_root.black .delete_btn:hover {
+  background-image: url("/img/renewal/drive/list_delete_on.png");
+}

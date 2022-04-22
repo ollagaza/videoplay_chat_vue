@@ -1,0 +1,763 @@
+#videoContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  opacity: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #000;
+}
+#videoContainer.on {
+  opacity: 1;
+}
+
+.video_content_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.full_hd_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: center center;
+  z-index: 5;
+}
+
+.full_hd_container .inner_layer {
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video_content_wrapper > .video_player_wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+video, #mteg_video_player, #mteg_preview_player, .video-js, .vjs-default-skin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 2;
+}
+
+.vjs-text-track-display {
+  display: none;
+}
+
+#videoUI {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  box-sizing: border-box;
+  z-index: 5;
+  opacity: 1;
+}
+
+#videoUI .controller-bg {
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 98px;
+  z-index: 10;
+  background-image: url('/img/video/bg_gradation.png');
+  background-repeat: repeat-x;
+  pointer-events: none;
+  background-position: bottom;
+}
+
+#videoUI .title-bg {
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 98px;
+  z-index: 10;
+  background-image: url('/img/video/bg_gradation.png');
+  background-repeat: repeat-x;
+  pointer-events: none;
+  background-position: bottom;
+}
+
+#videoUI .controller {
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4em;
+  color: #fff;
+  z-index: 20;
+  padding: 0 2em;
+}
+
+#videoUI>.controller .progress-control {
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  margin: 0 0.5em;
+  padding: 0.5em 0 0 0;
+  height: 1.5em;
+}
+
+#videoUI>.controller .progress-control>.progress-container {
+  box-sizing: border-box;
+  height: 0.5em;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+/*#videoUI>.controller .progress-control>.progress-container>div {*/
+/*  transform: scaleY(0.5);*/
+/*  transform-origin: left center;*/
+/*  transition: all 0.2s;*/
+/*  transition-timing-function: linear;*/
+/*}*/
+
+/*#videoUI>.controller .progress-control:hover>.progress-container>div {*/
+/*  transform: scaleY(1);*/
+/*  opacity: 1;*/
+/*}*/
+
+#videoUI>.controller .progress-control>.progress-container>.progress-bg {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#videoUI>.controller .progress-control>.progress-container>.load-bar {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#videoUI>.controller .progress-control>.progress-container>.progress-bar {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 1);
+}
+
+#videoUI>.controller .progress-control>.progress-container>.progress-handle {
+  position: absolute;
+  top: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  background-color: rgba(255, 0, 0, 1);
+  z-index: 30;
+  opacity: 1;
+  /*transform: scale(0.3);*/
+  transform: scale(1);
+  transform-origin: center center;
+}
+
+/*#videoUI>.controller .progress-control:hover>.progress-container>.progress-handle {*/
+/*  transition: all 0.2s;*/
+/*  opacity: 1;*/
+/*}*/
+
+#videoUI>.controller .progress-control>.progress-container>.progress-time {
+  position: absolute;
+  top: -2.5em;
+  padding: 0.1em 0.5em 0.2em 0.5em;
+  border-radius: 0.2em;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.6em;
+  transform: scaleY(1) translateX(-50%);
+  opacity: 0;
+  z-index: 20;
+}
+
+#videoUI>.controller .progress-control:hover>.progress-container>.progress-time {
+  transform: scaleY(1) translateX(-50%);
+  opacity: 1;
+}
+
+#videoUI>.controller .progress-control>.progress-container>.progress-over-line {
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  width: 1px;
+  transition: none;
+  z-index: 20;
+}
+
+#videoUI>.controller .progress-control>.progress-container>.progress-over-time {
+  position: absolute;
+  top: 1.5em;
+  padding: 0.1em 0.5em 0.2em 0.5em;
+  border-radius: 0.2em;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 1em;
+  transform: scaleY(1) translateX(-50%);
+  opacity: 0;
+  transition: none;
+  z-index: 60;
+  pointer-events: none;
+}
+#videoUI>.controller .progress-control:hover>.progress-container>.progress-over-time {
+  transform: scaleY(1) translateX(-50%);
+  opacity: 1;
+}
+#videoUI>.controller .progress-control>.progress-container>.progress-range-bar {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2e6bb8;
+  transition: none;
+}
+#videoUI>.controller .progress-control>.progress-container>.progress-range-bar.on {
+  display: block;
+}
+
+#videoUI>.controller .progress-control>.progress-event-target {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 40;
+}
+
+#videoUI .controller>.control-divider {
+  display: block;
+  height: 2em;
+  margin: 0;
+  overflow: hidden;
+}
+
+#videoUI .controller>.control-divider::after {
+  content: '';
+  float: none;
+  clear: both;
+}
+
+#videoUI .controller>.control-divider>.control-left {
+  float: left;
+  height: 100%;
+}
+
+#videoUI .controller>.control-divider>.control-right {
+  float: right;
+  height: 100%;
+}
+
+#videoUI .controller>.control-divider .play-time {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: auto;
+  font-size: 1em;
+  line-height: 2em;
+  cursor: default;
+}
+
+#videoUI>.controller .volume-bar {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 5em;
+  outline: none;
+  transition: 0.2s;
+  margin: 0 0.5em;
+}
+
+#videoUI>.controller .volume-bar>.volume-event-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#videoUI>.controller .volume-bar>.volume-slider {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  margin: 0 0.5em;
+}
+
+#videoUI>.controller .volume-bar>.volume-slider>.volume-slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 3em;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+  margin-top: -0.5em;
+  background: #fff;
+}
+
+#videoUI>.controller .volume-bar>.volume-slider>.volume-slider-handle::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 0.5em;
+  background-color: #fff;
+  height: 0.4em;
+  margin-top: -0.2em;
+  width: 6em;
+}
+
+#videoUI>.controller .volume-bar>.volume-slider>.volume-slider-handle::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0.5em;
+  background-color: rgba(255, 255, 255, .2);
+  height: 0.4em;
+  margin-top: -0.2em;
+  width: 6em;
+}
+
+#videoUI>.controller .button {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  cursor: pointer;
+  width: 2.6em;
+  text-align: center;
+}
+#videoUI>.controller .button.disable {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+#videoUI>.controller .button>span {
+  position: relative;
+  display: block;
+  width: 2em;
+  height: 100%;
+  transform-origin: center center;
+  transition: 0.3s;
+}
+
+#videoUI>.controller .button>span::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#videoUI>.controller .button.play>span::before {
+  /*content: "play_arrow";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_play.png");
+}
+
+#videoUI>.controller .button.play.off>span::before {
+  /*content: "pause";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_stop.png");
+}
+
+#videoUI>.controller .button.sound>span::before {
+  /*content: "volume_up";*/
+  margin-left: -10px;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-image: url("/img/icon/player/btn_sound.png");
+}
+
+#videoUI>.controller .button.sound.mid>span::before {
+  /*content: "volume_down";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_sound1.png");
+}
+
+#videoUI>.controller .button.sound.low>span::before {
+  /*content: "volume_mute";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_sound2.png");
+}
+/*#videoUI>.controller .button.sound.off>span::before {*/
+/*  content: "volume_off";*/
+/*}*/
+#videoUI>.controller .button.sound.off>span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/renewal/disable_line.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#videoUI>.controller .button.fullscreen>span::before {
+  /*content: "fullscreen";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_full.png");
+}
+
+#videoUI>.controller .button.fullscreen.off>span::before {
+  /*content: "fullscreen_exit";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_min.png");
+}
+
+#videoUI>.controller .button.wide_screen>span::before {
+  /*content: "fullscreen";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_wide.png");
+}
+
+#videoUI>.controller .button.wide_screen.on>span::before {
+  /*content: "fullscreen_exit";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_standard.png");
+}
+
+#videoUI>.controller .button.setting>span.gear::before {
+  /*content: "settings";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_option.png");
+}
+
+#videoUI>.controller .button.setting.on>span.gear::before {
+  transform-origin: center center;
+  transform: rotate(30deg);
+}
+#videoUI>.controller .button.setting>.hd-text {
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-image: url('/img/video/hd_icon.png');
+  background-size: cover;
+  opacity: 0;
+}
+#videoUI>.controller .button.setting.hd>.hd-text {
+  opacity: 1;
+}
+#videoUI>.controller .button.comment>span::before {
+  content: "text_fields";
+}
+
+#videoUI>.controller .button.add_clip>span::before {
+  content: "add_to_photos";
+}
+
+#videoUI>.controller .button.repeat>span::before {
+  /*content: "repeat";*/
+  margin-left: -9px;
+  margin-top: -9px;
+  width: 18px;
+  height: 18px;
+  content: "";
+  background-image: url("/img/icon/player/btn_repeat.png");
+}
+#videoUI>.controller .button.repeat.off>span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/renewal/disable_line.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#videoUI>.controller .add_index_button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+#videoUI>.controller .add_index_button > span {
+  /*color: #2e6bb8;*/
+}
+#videoUI>.controller .add_index_button>.button.add_index>span::before {
+  /*content: "library_add";*/
+  content: "";
+  background-image: url("/img/icon/player/btn_index.png");
+}
+#videoUI>.controller .shortcut_button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+#videoUI>.controller .shortcut_button > img {
+  margin-right: 6px;
+}
+
+#videoUI>.setting-menu {
+  position: absolute;
+  display: none;
+  bottom: 4.3em;
+  right: 1.5em;
+  width: auto;
+  height: auto;
+  background-color: rgba(30, 30, 30, 0.7);
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 50;
+  opacity: 0;
+}
+#videoUI>.setting-menu.on {
+  opacity: 1;
+  display: block;
+}
+
+#videoUI>.setting-menu>.menu-wrapper {
+  position: relative;
+  font-size: 15px;
+  padding: 0.5em 0;
+  display: none;
+}
+#videoUI>.setting-menu>.menu-wrapper.on {
+  display: block;
+}
+
+
+#videoUI>.setting-menu>.menu-wrapper .menu-header {
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.3em 0 0.8em 2.2em;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 0.5em;
+}
+#videoUI>.setting-menu>.menu-wrapper .menu-header::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  width: 0.4em;
+  height: 0.4em;
+  transform: translateY(-85%) rotate(-45deg);
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+
+#videoUI>.setting-menu>.menu-wrapper .menu-list {
+  position: relative;
+  padding: 0.5em 0;
+}
+
+#videoUI>.setting-menu>.menu-wrapper .menu-item {
+  position: relative;
+  display: table-row;
+  cursor: pointer;
+  outline: none;
+  height: 2em;
+}
+#videoUI>.setting-menu>.menu-wrapper .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#videoUI>.setting-menu>.menu-wrapper .menu-item .menu-label {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  padding: 0 1em;
+}
+#videoUI>.setting-menu>.menu-wrapper .menu-item.selected .menu-label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.4em;
+  height: 0.7em;
+  transform: translate(-50%, -60%) rotate(45deg);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+#videoUI>.setting-menu>.menu-wrapper .menu-item .menu-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding: 0 1em 0 1em;
+}
+
+#videoUI>.setting-menu>.menu-wrapper .menu-item .menu-content {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding: 0 2.2em 0 1em;
+}
+#videoUI>.setting-menu>.menu-wrapper .menu-item .menu-content>div.hd {
+  position: relative;
+  padding-right: 1.4em;
+}
+#videoUI>.setting-menu>.menu-wrapper .menu-item .menu-content>div.hd::before {
+  content: 'HD';
+  position: absolute;
+  top: -0.2em;
+  right: 0;
+  font-size: 0.7em;
+  color: #f00;
+}
+#videoUI>.setting-menu>.menu-wrapper .menu-item .menu-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  width: 0.4em;
+  height: 0.4em;
+  transform: translateY(-50%) rotate(-45deg);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+#videoUI>.setting-menu>.menu-wrapper .menu-item .menu-quality {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding: 0 2.2em 0 1em;
+}
+#videoUI>.setting-menu>.menu-wrapper .menu-item .menu-quality.hd::before {
+  content: 'HD';
+  position: absolute;
+  top: 0.3em;
+  right: 1em;
+  font-size: 0.7em;
+  color: #f00;
+}
+
+#videoUI>.controller .progress-control>.progress-range {
+  position: absolute;
+  display: none;
+  top: -2em;
+  left: 0;
+  background-color: #2e6bb8;
+  transform: none;
+  font-size: 1em;
+  padding: 0.3em 0.4em 0.4em 0.4em;
+  color: rgba(255, 255, 255, 1);
+  z-index: 50;
+  outline: none;
+}
+#videoUI>.controller .progress-control>.progress-range.on {
+  display: block;
+}
+#videoUI>.controller .progress-control>.progress-range::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5em;
+  right: 0;
+  border-width: 0.5em 0 0 0.5em;
+  border-style: solid;
+  border-color: #2e6bb8 transparent;
+  display: block;
+  width: 0;
+}
+
+#videoUI>.controller .progress-control>.progress-range.start {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+#videoUI>.controller .progress-control>.progress-range.end {
+  left: 0;
+  background-color: #479e8e;
+}
+
+#videoUI>.controller .progress-control>.progress-range.end::before {
+  left: 0;
+  right: auto;
+  border-width: 0.5em 0.5em 0 0;
+  border-style: solid;
+  border-color: #479e8e transparent;
+}
+
+#videoContainer>.global-event-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 100;
+}
+#videoContainer>.global-event-target.on {
+  display: block;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}

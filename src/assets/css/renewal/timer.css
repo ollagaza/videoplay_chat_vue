@@ -1,0 +1,89 @@
+.timer_wrapper {
+  width: var(--size);
+  height: var(--size);
+}
+.timer_wrapper * {
+  box-sizing: border-box;
+}
+.timer_wrapper .timer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+}
+.timer_wrapper .timer.on {
+  opacity: 1;
+}
+.timer_wrapper .timer .timer_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+.timer_wrapper .timer .block {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.timer_wrapper .timer .block.left {
+  left: 0;
+}
+.timer_wrapper .timer .block.right {
+  right: 0;
+}
+.timer_wrapper .timer .block .time_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition-timing-function: linear;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: rotate(0);
+  transition-duration: 0s;
+  transition-delay: 0s;
+}
+.timer_wrapper .timer.on .block .time_bar {
+  transition-duration: calc(var(--duration) * 0.5s);
+  transform: rotate(180deg);
+}
+.timer_wrapper .timer .block.left .time_bar {
+  transform-origin: 100% 50%;
+  border-width: var(--line-size) 0 var(--line-size) var(--line-size);
+  border-radius: calc(var(--size) / 2) 0 0 calc(var(--size) / 2);
+}
+.timer_wrapper .timer.on .block.left .time_bar {
+  transition-delay: calc(var(--duration) * 0.5s);
+}
+.timer_wrapper .timer .block.right .time_bar {
+  transform-origin: 0 50%;
+  border-width: var(--line-size) var(--line-size) var(--line-size) 0;
+  border-radius: 0 calc(var(--size) / 2) calc(var(--size) / 2) 0;
+}
+.timer_wrapper .paused {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.timer_wrapper .timer .remain {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: var(--font-size);
+  line-height: 1;
+}

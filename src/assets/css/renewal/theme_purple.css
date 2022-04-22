@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background-color: #ffffff; }
+.app_root.purple {
+  background-color: #ffffff;
+  color: #555555;
+}
+.app_root.purple textarea, .app_root.purple input, .app_root.purple select {
+  color: #555555;
+}
+
+.app_root.purple nav {
+  background-color: #7664ca;
+  opacity: 1;
+}
+.app_root.purple nav > .menu {
+  border-right: 2px solid #40b5e7;
+}
+.app_root.purple nav > .menu:last-child {
+  border-right: none;
+}
+
+.app_root.purple .btn.blue.large {
+  width: 168px;
+  height: 48px;
+  font-size: 18px !important;
+}
+.app_root.purple .btn.blue.large > img, .app_root.purple .btn.blue.large > span {
+  margin: 0 6px;
+}

@@ -1,0 +1,7 @@
+.markdown-body * {
+  margin: initial;
+  padding: initial;
+}
+.markdown-body ul {
+  list-style: initial;
+}

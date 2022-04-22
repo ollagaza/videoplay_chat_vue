@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background-color: #ffffff; }
+.app_root.turquoise {
+  background-color: #ffffff;
+  color: #555555;
+}
+.app_root.turquoise textarea, .app_root.turquoise input, .app_root.turquoise select {
+  color: #555555;
+}
+
+.app_root.turquoise nav {
+  background-color: #0ea8ba;
+  opacity: 1;
+}
+.app_root.turquoise nav > .menu {
+  border-right: 2px solid #40b5e7;
+}
+.app_root.turquoise nav > .menu:last-child {
+  border-right: none;
+}
+
+.app_root.turquoise .btn.blue.large {
+  width: 168px;
+  height: 48px;
+  font-size: 18px !important;
+}
+.app_root.turquoise .btn.blue.large > img, .app_root.turquoise .btn.blue.large > span {
+  margin: 0 6px;
+}

@@ -1,7 +1,7 @@
 <template>
   <footer class="footer" >
     <div class="footer_wrapper" style="border-top: 1px solid #CCC;">
-      <div class="footer_copyright">copyright©2021 . All rights reserved.</div>
+      <div class="footer_copyright">copyright©2022 . All rights reserved.</div>
     </div>
   </footer>
 </template>
@@ -47,6 +47,7 @@ export default {
   /*width: 100%;*/
   /*padding: 5px 0;*/
   /*text-align: center;*/
+  background-color: #fff;
 }
 
 .footer > .footer_wrapper {

@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background-color: #ffffff; }
+.app_root.emerald {
+  background-color: #ffffff;
+  color: #555555;
+}
+.app_root.emerald textarea, .app_root.emerald input, .app_root.emerald select {
+  color: #555555;
+}
+
+.app_root.emerald nav {
+  background-color: #29a381;
+  opacity: 1;
+}
+.app_root.emerald nav > .menu {
+  border-right: 2px solid #079882;
+}
+.app_root.emerald nav > .menu:last-child {
+  border-right: none;
+}
+
+.app_root.emerald .btn.blue.large {
+  width: 168px;
+  height: 48px;
+  font-size: 18px !important;
+}
+.app_root.emerald .btn.blue.large > img, .app_root.emerald .btn.blue.large > span {
+  margin: 0 6px;
+}

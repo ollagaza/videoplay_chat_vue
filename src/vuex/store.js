@@ -45,5 +45,10 @@ export default new Vuex.Store({
       // Vue.$log.debug('setUserStoredData ===');
       state.user_data.stored = stored_data;
     },
+    updateUserStoredData(state, user_data) {
+      Object.keys(user_data).forEach((key) => {
+        state.user_data.stored[key] = user_data[key];
+      });
+    },
   },
 });

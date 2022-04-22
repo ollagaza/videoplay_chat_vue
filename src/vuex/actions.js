@@ -63,3 +63,10 @@ export const RefreshToken = async ({ dispatch, getters }) => {
 
   return true;
 };
+
+export const UpdateUserData = ({ commit, state }, changes) => {
+  if (!state.auth || !state.auth.logged_info) return;
+  commit('updateUserStoredData', changes);
+  api_user.updateUserData(state.auth.logged_info.seq, changes);
+};
+

@@ -329,6 +329,100 @@ const getMemberStatusStr = (status) => {
   return result;
 };
 
+const formatSecToTime = (sec, zero_hour_remove = false) => {
+  if (sec !== 0 && !sec) return null;
+
+  const time = new Date(sec * 1000);
+  if (zero_hour_remove) {
+    if (time.getUTCHours() === 0) {
+      return time.toISOString().substr(14, 5);
+    }
+  }
+  return time.toISOString().substr(11, 8);
+};
+
+const formatSecToTimeKOR = (sec) => {
+  const date_str = formatSecToTime(sec);
+  if (!date_str) return null;
+  return date_str.replace(/([0-9]+):([0-9]+):([0-9]+)/gi, '$1시$2분$3초');
+};
+const numberFormat = (num) => {
+  if (!num) {
+    return '0';
+  }
+  return numeral(num).format('0,0.[0]');
+};
+
+const numberString = (num) => {
+  if (!num) {
+    return '0';
+  }
+  let numstr = 0;
+  if (num > 1000) {
+    numstr = `${numberFormat((num / 1000).toFixed(1))}K`;
+  } else {
+    numstr = numberFormat(num);
+  }
+  return numstr;
+};
+const setNumberPad = (target_num, pad_length = 2) => {
+  const target_num_length = target_num.toString().length;
+  return target_num_length >= pad_length ? target_num : new Array(pad_length - target_num_length + 1).join('0') + target_num;
+};
+
+const getDateStr = date_str => date_str.substr(0, 10);
+
+const getDateStr2 = (date_str, lang = 'Kor') => {
+  let str = '';
+  const date = new Date(date_str);
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+
+  if (lang === 'Kor') {
+    str = `${year}년 ${month.toString().length === 1 ? `0${month}` : `${month}`}월 ${day.toString().length === 1 ? `0${day}` : `${day}`}일`;
+  } else {
+    str = `${year}.${month}.${day}`;
+  }
+  return str;
+};
+
+const getDateStr3 = (date_str, type) => {
+  let str = '';
+  const date = new Date(date_str);
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const hour = date.getHours();
+  const minute = date.getMinutes();
+  const second = date.getSeconds();
+
+  if (type === 'date') {
+    str = `${year}-${setNumberPad(month)}-${setNumberPad(day)}`;
+  } else if (type === 'datetime') {
+    str = `${year}-${setNumberPad(month)}-${setNumberPad(day)} ${setNumberPad(hour)}:${setNumberPad(minute)}:${setNumberPad(second)}`;
+  } else if (type === 'datetime_nosec') {
+    str = `${year}-${setNumberPad(month)}-${setNumberPad(day)} ${setNumberPad(hour)}:${setNumberPad(minute)}`;
+  }
+  return str;
+};
+
+const getProfileImagePath = (image_path, seq = 0, is_group = false) => {
+  let default_profile_image = '/img/renewal/mentoring/person.png';
+  if (seq) {
+    const no = seq % 5 + 1;
+    if (is_group) {
+      default_profile_image = `/img/renewal/profile/profile_no${no}.png`;
+    } else {
+      default_profile_image = `/img/renewal/profile/profile_no${no}.png`;
+    }
+  }
+  image_path = trim(image_path);
+  if (!image_path) {
+    return default_profile_image;
+  }
+  return image_path;
+};
 export default {
   getLanguage,
   replaceByTemplate,
@@ -355,4 +449,13 @@ export default {
   getDateToStr,
   getMemberStatusStr,
   getDateTimeToStr,
+  formatSecToTime,
+  formatSecToTimeKOR,
+  numberFormat,
+  numberString,
+  setNumberPad,
+  getDateStr,
+  getDateStr2,
+  getDateStr3,
+  getProfileImagePath,
 };

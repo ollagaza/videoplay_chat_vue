@@ -1,0 +1,129 @@
+.group_option_popup {
+  width: 710px;
+  padding: 30px;
+}
+.group_option_popup .popup_title_top {
+  padding-bottom: 0;
+  min-height: 0;
+  border-bottom: none;
+  flex: 0 0 auto;
+}
+.group_option_popup .group_option_popup_info_text {
+  padding: 30px 0 0 0;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #555555;
+}
+.group_option_popup .group_option_popup_sub_info_text {
+  padding: 20px 0 0 0;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #555555;
+}
+.group_option_popup .group_option_popup_radio_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.group_option_popup .group_option_popup_radio_list > .group_option_popup_radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 0 130px;
+}
+.group_option_popup .group_option_popup_radio_list > .group_option_popup_radio.on {}
+.group_option_popup .group_option_popup_radio_list > .group_option_popup_radio > .check_round {
+}
+.group_option_popup .group_option_popup_radio_list > .group_option_popup_radio > .radio_text {
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #555555;
+  cursor: pointer;
+}
+.group_option_popup .group_option_popup_radio_list > .group_option_popup_radio.on > .radio_text {
+  cursor: default;
+}
+
+.group_option_popup .group_option_popup_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid transparent;
+}
+.group_option_popup .group_option_popup_buttons.top_border {
+  border-top: 1px solid #dddddd;
+}
+.group_option_popup .group_option_popup_buttons > .btn {
+  margin: 0 5px;
+}
+.group_option_popup .group_option_popup_process_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.group_option_popup .group_option_popup_process_animation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  border-top: 1px solid transparent;
+}
+
+.group_option_popup .group_member_info_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  flex: 0 0 80px;
+  height: 80px;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  overflow: hidden;
+  margin-top: 30px;
+  padding: 0 30px;
+  font-size: 15px;
+  color: #333333;
+}
+.group_option_popup .group_member_info_wrapper > div {
+  margin-right: 10px;
+}
+.group_option_popup .group_member_info_wrapper > div:last-child {
+  margin-right: 0;
+}
+.group_option_popup .group_member_info_wrapper .user_name {
+  flex: 1;
+}
+.group_option_popup .group_member_info_wrapper .used_storage {
+  flex: 0 0 110px;
+}
+.group_option_popup .group_member_info_wrapper .join_date {
+  flex: 0 0 190px;
+}
+.group_option_popup .group_member_info_wrapper .plan_name {
+  flex: 0 0 180px;
+}
+.group_option_popup .group_member_info_wrapper .expire_date {
+  flex: 0 0 230px;
+}
+.group_option_popup .group_member_info_wrapper > div > label {
+  color: #aaaaaa;
+  font-size: 13px;
+  margin-right: 10px;
+}

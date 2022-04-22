@@ -36,3 +36,5 @@ export const is_logged2 = (state, { logged_info }) => logged_info.seq;
 export const is_mobile = () => is_mobile_device;
 export const group_invite_code = state => state.group_invite_code;
 export const link_code = state => state.link_code;
+
+export const user_stored_data = state => state.user_data.stored;
